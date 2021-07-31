@@ -1,0 +1,20 @@
+{
+  "name": "restaurantservice",
+  "version": "1.0.0",
+  "description": "Api to fetch the restaurant data",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config src/app.js dotenv_config_path=.env.local",
+    "dev:docker": "nodemon -r dotenv/config src/app.js dotenv_config_path=.env.docker"
+  },
+  "author": "Pankaj Thakur",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.2"
+  }
+}

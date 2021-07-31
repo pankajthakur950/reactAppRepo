@@ -1,0 +1,58 @@
+#required line, specifies version of docker-compose we are using
+version: '3'
+
+#service means a type of container 
+services:
+  #create mongodb container
+  mongo-db:
+    #use the image from docker hub to create this container
+    image: 'mongo'
+    ports:
+      - "27017:27017"
+  #create container for node app
+  restaurant-service:
+    restart: always
+    #for node app, use dockerfile to build the container 
+    build: ./server/RestaurantService
+    #port mapping for running node server inside the container with outer environment
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo-db
+    #create container for node app
+  user-service:
+    restart: always
+    #for node app, use dockerfile to build the container 
+    build: ./server/UserService
+    #port mapping for running node server inside the container with outer environment
+    ports:
+      - "4001:4001"
+    depends_on:
+      - mongo-db
+  api-gateway:
+    restart: always
+    #for node app, use dockerfile to build the container 
+    build: ./server/GraphQLApiGateway
+    #port mapping for running node server inside the container with outer environment
+    ports:
+      - "3003:3003"
+    depends_on:
+      - mongo-db
+      - user-service
+      - restaurant-service
+  react-app:
+    stdin_open: true
+    #for node app, use dockerfile to build the container 
+    build: 
+      context: ./client/findmyrestaurant
+      dockerfile: Dockerfile.prod
+      #Dockerfile for development
+      #dockerfile: Dockerfile
+    #port mapping for running node server inside the container with outer environment
+    ports:
+      - "8082:80"
+    depends_on:
+      - mongo-db
+      - api-gateway
+    #environment:
+    #  - CHOKIDAR_USEPOLLING=true

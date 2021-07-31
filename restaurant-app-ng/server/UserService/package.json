@@ -1,0 +1,26 @@
+{
+  "name": "userservice",
+  "version": "1.0.0",
+  "description": "Api for user data",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config src/app.js dotenv_config_path=.env.local",
+    "dev:docker": "nodemon -r dotenv/config src/app.js dotenv_config_path=.env.docker"
+  },
+  "author": "Pankaj Thakur",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^5.7.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.2",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "swagger-ui-express": "^4.1.4"
+  }
+}
