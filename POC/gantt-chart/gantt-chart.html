@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>TMT_Onboarding_Session planner page@2x (1)</title>
+
+
+<link rel="stylesheet" href="css/gantt-chart.css" type="text/css"/>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="requestJson.json"></script>
+<script type="text/javascript" src="js/gantt-chart.js"></script>
+</head>
+<body>
+	<div  class="ups-ds-gantt-chart">
+	<script id="category-item-template" type="text/category-item-template">
+		<div class="category-item" data-category-header="Shipping(4)">
+			<span class="toggle-icon">+</span>
+			<span class="category-icon"></span>
+			<div class="request-list">
+			</div>
+		</div>
+	</script>
+	<script id="request-item-template" type="text/request-item-template">
+		<div class="request-item">
+			<span class="request-id">2000091</span>
+			<span class="request-duration-bar-container"><span class="bar"></span></span>
+		</div>
+	</script>
+	<script id="timeline-marker-template" type="text/timeline-marker-template">
+		<div class="timeline-marker">
+			<span class="date"></span>
+			<span class="divider"></span>
+		</div>
+    </script>
+    <h1>Roadmap</h1>
+    <div class="ups-ds-gantt-chart_color_map">
+        <span class="create">Created / Pending / Reopened</span>
+        <span class="live">Live / Reporting</span>
+        <span class="closed">Closed</span>
+    </div>
+	<div class="ups-ds-gantt-chart_container">
+        <div class="ups-ds-gantt-chart_header">
+            <div class="ups-ds-gantt-chart_timeline_switch">
+                <div class="switch selected" data-view="monthly">Month</div>
+                <div class="switch" data-view="quarterly">Quarter</div>
+                <div class="switch" data-view="halfyearly">Half year</div>
+			</div>
+			<div class="ups-ds-gantt-chart_timeline">
+				<button class="timeline-btn prev-time"></button>
+				<button class="timeline-btn next-time"></button>
+				<div class="timeline"></div>
+			</div>
+        </div>
+		<div class="ups-ds-gantt-chart_left-trail">
+			<div class="category-list">
+				
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

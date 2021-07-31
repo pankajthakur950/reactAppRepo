@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>TMT_Onboarding_Session planner page@2x (1)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--<link rel="stylesheet" href="css/default.css" type="text/css"/>-->
+<link rel="stylesheet" href="css/dark.css" type="text/css"/>
+<style>
+	header{
+		height: 50px;
+		font-weight: 700;
+		font-size: 30px;
+		text-align: center;
+		line-height: 45px;
+		background: #f5f5f5;
+	}
+	.hljs{
+		background: #161616;
+		max-height: 206px;
+	}
+	.right-nav{
+		width: 260px;
+		font-size: 50px;
+		text-align: center;
+		padding-top: 200px;
+	}
+	.left-nav{
+		width: 275px;
+		box-shadow: 10px 3px 46px #00000012;
+		font-size: 50px;
+		text-align: center;
+		padding-top: 200px;
+	}
+	.content{
+		flex-grow: 1;
+		padding: 20px 50px 0 50px;
+		
+	}
+	section{
+		display: flex;
+	}
+	.col-2{
+		display: flex;
+		justify-content: space-between;
+		height: 250px;
+		align-items: center;
+	}
+	.col-2 .img, .col-2 pre{
+		flex-basis: 48%;
+	}
+	.col-2 img{
+		width: 100%;
+	}
+	.col-2 pre{
+		max-height: 250px;
+		background: #161616;
+	}
+	
+	
+	
+</style>
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script>
+	var escapeEl = document.createElement('textarea');
+
+    window.escapeHTML = function(html) {
+        escapeEl.textContent = html;
+        return escapeEl.innerHTML;
+    };
+	document.addEventListener('DOMContentLoaded', (event) => {
+	  document.querySelectorAll('pre code').forEach((block) => {
+		console.log(block);
+		if(block.classList.contains("html")){
+			var escapedHTML = escapeHTML(block.innerHTML);
+			block.innerHTML = escapedHTML;
+		}
+		hljs.highlightBlock(block);
+	  });
+	});
+</script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+	<header>
+		Demo Header
+	</header>
+	<section>
+	<div class="left-nav">
+		Left Navigation
+	</div>
+	
+	<div class="content">
+	<div class="col-2">
+	<div class="img">
+		<img src="https://dummyimage.com/600x400/000/fff&text=dummy+image"/>
+	</div>
+	<pre>
+		<code class="html">
+<section class="ups-accordion_list ups-wrap">
+	<input type="search" id="searchPageInput" aria-label="Search through page content"
+                name="search" class="form-control search" placeholder="Search">
+	<div class="ups-wrap_inner">
+		<div class="ups-accordion_listHead">
+			<h2 class="ups-article-header">List Title</h2>
+			<p>List description</p>
+		</div>
+		<div class="ups-accordion_wrapper">
+			<div class="ups-accordion_content" role="presentation">
+				<div class="ups-accordion_item">
+					<div class="ups-acc-headcont" role="heading" aria-level="3">
+					<a href="#" class="ups-accordion_toggle" role="button" aria-controls="ups-accordionPanel0" id="ups-accordionHead0" aria-expanded="false">
+							List Item 1
+							<i>
+								<span class="icon ups-icon-plus" aria-hidden="true"></span>
+							</i>
+						</a>
+					</div>
+					<div class="ups-accordion_expand" role="region" id="ups-accordionPanel0" aria-hidden="true" aria-labelledby="ups-accordionHead0">
+						<div class="ups-contentBlock ups-wrap">
+							<div class="ups-wrap_inner">
+								<div class="ups-contentBlock_wrap clearfix">
+									<p> List Item 1 Content</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		</code>
+	</pre>
+	</div>
+<pre>
+		<code class="css">
+pre{
+	width: 50%;
+}
+.hljs{
+	background: #161616;
+}
+		</code>
+	</pre>
+	<pre>
+		<code class="javascript" id="style-1">
+function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+
+  return (
+    <div>
+      <web-component>{block}</web-component>
+    </div>
+  )
+}
+
+export  $initHighlight;
+		</code>
+	</pre>
+	
+	
+	
+	</div>
+	<div class="right-nav">Right Navigation</div>
+	</section>
+</body>
+</html>

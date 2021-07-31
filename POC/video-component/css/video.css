@@ -1,0 +1,54 @@
+.video-container{
+    width: 80%;
+    position: relative;
+}
+.video-container video{
+    width: 100%;
+}
+.video-container .video-controls{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: all 0.2s ease;
+}
+.video-container .video-controls.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+.settings-dropdown-btn{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+}
+.settings-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.settings-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    transition: all 0.2s ease;
+}
+.settings-dropdown-content.show{
+    display: block;
+}
+/* Links inside the dropdown */
+.settings-dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.settings-dropdown-content a:hover {background-color: #ddd}
+
+.video-quality{
+	cursor: pointer;
+}
