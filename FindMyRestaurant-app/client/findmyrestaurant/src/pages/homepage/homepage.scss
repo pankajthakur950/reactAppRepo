@@ -1,0 +1,108 @@
+@import "./../../scss/mixins";
+
+.restaurant-list-section {
+  .hero-image-container {
+    .hero-banner {
+      position: relative;
+      background-size: auto;
+      min-height: 450px;
+      background-position: bottom center;
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+    .hero-banner__content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      width: 90%;
+      .hero-header {
+        font-size: 30px;
+        line-height: 40px;
+        color: #fff;
+        margin: 0 0 10px;
+        letter-spacing: 2px;
+        font-weight: 500;
+        @media only screen and (min-width: "767px") {
+          font-size: 36px;
+          line-height: 36px;
+        }
+      }
+      .hero-subHeader {
+        color: #fff;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        @media only screen and (min-width: "767px") {
+          font-size: 23px;
+          line-height: 30px;
+        }
+      }
+      .search-input {
+        width: 250px;
+        height: 50px;
+        padding: 0;
+        padding-left: 18px;
+        border: none;
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      #searchForm {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .search-near-you{
+        color: white;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        &:hover{
+          border-color: white;
+        }
+      }
+    }
+  }
+  .section-title {
+    margin-bottom: 40px;
+    h3 {
+      font-size: 30px;
+      text-transform: uppercase;
+      span {
+        position: relative;
+        &:before {
+          left: -72px;
+        }
+        &:after {
+          right: -72px;
+        }
+      }
+      span:before,
+      span:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        margin-top: -1px;
+        height: 3px;
+        border-top: 3px double #d9d8d7;
+      }
+    }
+    p {
+      font-size: 18px;
+      letter-spacing: 0.8px;
+    }
+  }
+}

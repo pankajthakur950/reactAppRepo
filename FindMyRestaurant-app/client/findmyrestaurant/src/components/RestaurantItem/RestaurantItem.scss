@@ -1,0 +1,81 @@
+@import "./../../scss/mixins";
+
+.restaurant-item-container {
+  display: flex;
+  flex-basis: 100%;
+  max-width: 100%;
+  @include respond("small-only") {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  @include respond("medium") {
+    flex-basis: 33.3%;
+    max-width: 33.3%;
+  }
+  @include respond("large") {
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+.restaurant-item {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+    .restaurant-item__image img {
+      transform: scale(1.1);
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+  .restaurant-item__image {
+    position: relative;
+    overflow: hidden;
+    img {
+      height: 220px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+  .restaurant-item__content {
+    h5.name {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+    }
+    .location {
+      margin: 0 0 3px;
+      line-height: 1.45;
+      color: #636363;
+      svg {
+        margin-right: 5px;
+      }
+    }
+    .cuisine {
+      margin: 10px 0 0;
+      color: #636363;
+      line-height: 24px;
+      display: flex;
+      span {
+        margin-right: 10px;
+      }
+      span.cuisine-item {
+        border-top: 1px solid #db3944;
+        color: #db3944;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        padding-top: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "./../../style/mixins";
+
+.collection-item {
+  width: 22%;
+  height: 350px;
+  position: relative;
+  &:hover{
+      cursor: pointer;
+      .collection-item__shopnow{
+          opacity: .8;
+          transition: opacity .1s linear;
+      }
+
+  }
+  .collection-item__content {
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    font-size: 18px;
+  }
+  .collection-item__image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 95%;
+  }
+  .collection-item__shopnow{
+    @include absolute-centered;
+    width: 80%;
+    height: 40px;
+    border: none;
+    background: white;
+    opacity: 0;
+    top: 80%;
+    &:hover{
+        background: black;
+        color: white;
+    }
+  }
+}

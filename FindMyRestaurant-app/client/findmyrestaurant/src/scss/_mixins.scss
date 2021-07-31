@@ -1,0 +1,47 @@
+/* Small only *@media screen and (max-width: 39.9375em) {}*/
+/* Small landscape with bigger screens  @media screen and (max-width: 47.938em)*/
+/* Medium and up @media screen and (min-width: 40em) {} */
+/* Medium only @media screen and (min-width: 40em) and (max-width: 63.9375em) {}*/
+/* Large and up @media screen and (min-width: 64em) {}*/
+/* Large only @media screen and (min-width: 64em) and (max-width: 74.9375em) {}*/
+
+$small-min: 414px;
+$small-max: 39.9375em;      // 639px
+$medium-min: 40em;          // 640px
+$medium-max: 64em;     		// 1024px
+$Large-min: 64.0625em;      // 1025px
+$Large-max: 74.9375em;      // 1199px
+$small-medium:47.938em;		// 767px
+
+@mixin respond($media) {
+  @if $media == small {
+    @media only screen and (max-width: $small-max) { @content; }
+  }
+
+  @else if $media == small-only {
+    @media only screen and (min-width: $small-min) { @content; }
+  }
+    
+  @else if $media == small-landscape {
+    @media only screen and (max-width: $medium-min) and (orientation:landscape) { @content; }
+  }
+
+  @else if $media == medium {
+    @media only screen and (min-width: $medium-min) { @content; }
+  }
+  @else if $media == medium-only {
+    @media only screen and (min-width: $medium-min) and (max-width: $medium-max) { @content; }
+  }
+  
+  @else if $media == small-medium {
+    @media only screen and (max-width: $small-medium) and (orientation:landscape) { @content; }
+  }
+  
+  @else if $media == large {
+    @media only screen and (min-width: $Large-min){ @content; }
+  }
+  
+  @else if $media == xtra-large {
+    @media only screen and (min-width: $Large-max){ @content; }
+  }
+}

@@ -1,0 +1,64 @@
+@import "./../../scss/mixins";
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    margin: 50px 15px 15px;
+    font-size: 36px;
+    font-weight: 500;
+  }
+  p.results-found {
+    font-weight: 300;
+    font-size: 14px;
+    color: #484848;
+    margin: 0 15px 20px;
+  }
+  .restaurant-list-view {
+    width: 100%;
+    @media only screen and (min-width: "840px"){
+      width: 840px;
+    }
+    .restaurant-item-container {
+      flex-basis: 100%;
+      max-width: 100%;
+      a {
+        display: flex;
+        flex-direction: column;
+        @include respond("medium"){
+          flex-direction: row;
+        }
+      }
+      .restaurant-item__image {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        flex: none;
+        @include respond("medium"){
+          width: 300px;
+        }
+      }
+      .restaurant-item__content {
+        flex: auto;
+        @include respond("medium"){
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .restaurant-map-view {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    order: -1;
+    @media only screen and (min-width: "1200px") {
+      position: fixed !important;
+      width: calc(100% - 870px);
+      right: 0;
+      height: 100%;
+    }
+    & > div {
+      height: calc(100vh - 100px);
+    }
+  }
+}

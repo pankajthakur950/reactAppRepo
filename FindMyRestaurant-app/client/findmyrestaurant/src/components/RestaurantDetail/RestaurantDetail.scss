@@ -1,0 +1,271 @@
+.restaurant-hero-detail {
+  background-size: cover;
+  height: 400px;
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  .restaurant-hero-detail__content {
+    display: flex;
+    margin-bottom: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media only screen and (max-width: "640px") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .restaurant-links {
+      @media only screen and (max-width: "640px") {
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+      .hero-restaurant-btn {
+        background: #db3944;
+        border-color: #db3944;
+        border-radius: 3px;
+        letter-spacing: 1.5px;
+        span.icon {
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        &:hover {
+          background: #870500;
+          border-color: #870500;
+          color: white;
+          border: none;
+        }
+      }
+    }
+    .restaurant-detail-inner {
+      background: rgba(0, 0, 0, 0.6);
+      width: auto;
+      max-width: 55%;
+      display: inline-block;
+      color: #fff;
+      padding: 25px 30px 20px;
+      letter-spacing: 0.3px;
+      @media only screen and (max-width: "640px") {
+        max-width: 100%;
+        margin: 0 20px;
+      }
+      .name {
+        color: #fff;
+        margin: 0 0 10px;
+        text-transform: uppercase;
+        font-size: 30px;
+        line-height: 1.15;
+        font-weight: 500;
+      }
+      .location {
+        font-size: 18px;
+        margin: 0 0 5px;
+        line-height: 24px;
+        svg {
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      }
+      .rating-item {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.restaurant-detail-section {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  @media only screen and (max-width: "640px") {
+    flex-direction: column;
+  }
+  .restaurant-detail__navigation {
+    flex-basis: 80%;
+    .item {
+      margin: 30px 0 60px;
+      h2 {
+        text-transform: uppercase;
+        font-size: 28px;
+        position: relative;
+        overflow: hidden;
+        letter-spacing: 1px;
+        span:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          margin-top: -1px;
+          height: 3px;
+          border-top: 3px double #d9d8d7;
+          left: 180px;
+        }
+      }
+      .item__content {
+        margin: 20px 0;
+      }
+      .sub-item {
+        h5 {
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .cuisines {
+          margin: 30px 0;
+          .cuisine-item {
+            box-shadow: rgba(54, 54, 54, 0.06) 0px 1px 2px;
+            color: rgb(17, 145, 153);
+            line-height: 1.2;
+            border: 1px solid rgb(207, 207, 207);
+            border-radius: 40px;
+            padding: 0.6rem;
+            margin: 0px 1rem 1rem 0px;
+          }
+        }
+      }
+    }
+  }
+  .restaurant-detail__aside {
+    padding: 0 15px;
+    .restaurant-detail__aside__contact {
+      display: flex;
+      margin: 30px 0;
+      .icon {
+        flex: 0 0 50px;
+        height: 50px;
+        border: 2px solid #db3944;
+        color: #db3944;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 24px;
+      }
+      .content {
+        margin-left: 10px;
+        h5 {
+          font-size: 20px;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          margin: 0 0 7px;
+        }
+        p.timings {
+          font-size: 14px;
+          margin-bottom: 7px;
+        }
+        span.number {
+          display: block;
+          font-weight: bold;
+          color: #db3944;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .restaurant-detail__aside-direction {
+      h5 {
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #484848;
+        display: flex;
+        align-items: center;
+        span.icon {
+          margin-right: 10px;
+          font-size: 24px;
+          border: 2px solid #db3944;
+          color: #db3944;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          padding-top: 10px;
+        }
+      }
+      .content > div {
+        height: 250px;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.review-list__item {
+  border: 1px solid #dedddc;
+  margin-top: 30px;
+  .review-content_average-rating {
+    padding: 20px 25px 0;
+    .CircularProgressbar {
+      width: 50px;
+      height: 50px;
+    }
+    .circular-bar__text {
+      font-weight: bold;
+      font-size: 16px;
+      font-style: italic;
+      color: #a1a1a1;
+      letter-spacing: 1px;
+      margin-left: 20px;
+    }
+  }
+  .review-entry {
+    padding: 15px 25px 20px;
+    letter-spacing: 0.5px;
+  }
+  .meta-bottom {
+    background: #e6e4e3;
+    border-top: 1px solid #dedddc;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      line-height: 30px;
+      li {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+.review-summary {
+  .circular-bar {
+    .CircularProgressbar-text {
+      font-weight: bold;
+    }
+  }
+  .rating-stats {
+    border: 3px double #ebe9e8;
+    display: flex;
+    padding: 20px;
+    .average-rating {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      .CircularProgressbar {
+        width: 100px;
+        height: 100px;
+      }
+      span.circular-bar__text {
+        font-size: 16px;
+      }
+    }
+    .rating-by-criteria {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-grow: 2;
+      flex-wrap: wrap;
+      .CircularProgressbar {
+        width: 50px;
+        height: 50px;
+      }
+      .rating-by-criteria__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span.circular-bar__text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
