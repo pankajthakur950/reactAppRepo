@@ -1,0 +1,23 @@
+.tooltip-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    min-width: 30px;
+}
+.tooltip-container__element{
+    cursor: pointer;
+}
+.tooltip-container__modal{
+    position: absolute;
+    right: 0;
+    min-width: 400px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #eee;
+    z-index: 100;
+}
+.tooltip-container__modal.modal-open{
+    display: block;
+}

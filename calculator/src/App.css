@@ -1,0 +1,40 @@
+.container.calculator{
+  border: 1px solid brown;  
+}
+.calculator-screen__input input{
+  color: transparent;
+  text-shadow: 0 0 0 gray;
+  text-align: right;
+  border-color: transparent!important;
+  background-color: #433437 !important;
+  outline: none !important;
+  width: 100%;
+  font-weight: 700;
+  font-size: 32px;
+}
+.calculator-keypad__row{
+  display: flex;
+}
+.calculator-keypad__row button{
+  flex-basis: 25%;
+  border: none;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  font-size: 32px;
+  padding: 15px;
+}
+.calculator-keypad__row button.numbers,
+.calculator-keypad__row button.clear{
+  background: white; 
+  color: #292929;
+  font-weight: 500;
+}
+.calculator-keypad__row button.clear{
+  flex-basis: 75%;
+}
+
+.calculator-keypad__row button.operators{
+  background: #F2274F; 
+  color: white;
+  font-weight: 700;
+}

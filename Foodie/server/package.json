@@ -1,0 +1,15 @@
+{
+  "name": "foodie-server",
+  "version": "1.0.0",
+  "description": "Server for foodie app",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server -p 3001 -w db.json -m ./node_modules/json-server-auth -r routes.json"
+  },
+  "author": "Pankaj Thakur",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.15.1",
+    "json-server-auth": "^1.2.1"
+  }
+}

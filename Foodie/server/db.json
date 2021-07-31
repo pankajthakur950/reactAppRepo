@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "email": "pankajthakur950@gmail.com",
+      "password": "$2a$10$eesI5xPF47dN7LwswkoMYuOdoHK7Z3/5wBIcl59l2P5GATtAaiv.K",
+      "id": 1
+    }
+  ],
+  "foodMenu": [
+    {
+      "id": 1,
+      "itemname": "idli",
+      "availabletime": "7:00-11:00,17:00-22:00",
+      "price": 20
+    },
+    {
+      "id": 2,
+      "itemname": "vada",
+      "availabletime": "7:00-11:00,17:00-22:01",
+      "price": 15
+    },
+    {
+      "id": 3,
+      "itemname": "rava idli",
+      "availabletime": "7:00-11:00,17:00-22:02",
+      "price": 35
+    },
+    {
+      "id": 4,
+      "itemname": "set dosa",
+      "availabletime": "7:00-11:00,17:00-22:03",
+      "price": 30
+    },
+    {
+      "id": 5,
+      "itemname": "ghee dosa",
+      "availabletime": "7:00-11:00,17:00-22:04",
+      "price": 40
+    },
+    {
+      "id": 6,
+      "itemname": "pongal",
+      "availabletime": "7:00-11:00,17:00-22:05",
+      "price": 50
+    },
+    {
+      "id": 7,
+      "itemname": "medu vada",
+      "availabletime": "7:00-11:00,17:00-22:06",
+      "price": 15
+    },
+    {
+      "id": 8,
+      "itemname": "upma",
+      "availabletime": "7:00-11:00,17:00-22:07",
+      "price": 30
+    },
+    {
+      "id": 9,
+      "itemname": "idiyappam",
+      "availabletime": "7:00-11:00,17:00-22:08",
+      "price": 10
+    },
+    {
+      "id": 10,
+      "itemname": "uttapam",
+      "availabletime": "7:00-11:00,17:00-22:09",
+      "price": 20
+    },
+    {
+      "id": 11,
+      "itemname": "puttu",
+      "availabletime": "7:00-11:00,17:00-22:10",
+      "price": 30
+    },
+    {
+      "id": 12,
+      "itemname": "rice bath",
+      "availabletime": "7:00-11:00,17:00-22:11",
+      "price": 50
+    }
+  ]
+}

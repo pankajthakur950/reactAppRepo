@@ -1,0 +1,17 @@
+{
+    "speeches":[
+        {
+            "id": 1,
+            "owner":"Mr. XYZ",
+            "content": "bla bla bla bla",
+            "keywords": "bla",
+            "date": "21/2/2020"
+        }
+    ],
+    "authors":[
+        {
+            "id":1,
+            "name":"Mr. XYZ"
+        }
+    ]
+}

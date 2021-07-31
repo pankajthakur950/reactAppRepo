@@ -1,0 +1,28 @@
+.ui.container{
+margin-top: 20px;
+}
+.card-header{
+display: flex;
+align-items: center; 
+}
+
+.card-header__image{
+padding: 10px;
+border: 1px solid lightgray;
+}
+
+.card-header__details{
+margin-left: 10px;
+}
+
+.card-header__details .name{
+font-weight: 700;
+}
+
+.card-header__details .metadata{
+color: gray;
+}
+
+.card-image img{
+max-height: 50vh;
+}
